@@ -8,6 +8,31 @@ void error_handling(int type){
     }
 }
 
+//pattern 1
+void simplePyramid(int rows){
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t PATTERN\n"
+        <<"+-------------------------------+\n";
+        
+    for(int i = 0 ; i < rows ; i++){
+        //print "*"
+        for(int j = 0 ; j <= i ; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t  CODE\n"
+        <<"+-------------------------------+\n";
+    
+    cout << "for(int i = 0 ; i < rows ; i++){\n"
+     << "    for(int j = 0 ; j <= i ; j++){\n"
+     << "        cout << \"* \";\n"
+     << "    }\n"
+     << "}\n";
+}
+
 
 int main(){
     int type;
@@ -44,7 +69,19 @@ int main(){
         error_handling(type);
         cout<<endl;
         
-        
+        //case handling
+        int n;//row size
+        switch(type){
+            case 1:
+            cout<<"Enter ROW size: ";
+            cin>>n;
+            simplePyramid(n);
+            
+            
+            
+            default:
+            cout<<"invalid input!";
+        }
         
         
        cout<<"\nDo you want to continue with another pattern (Y/N) :";
