@@ -37,6 +37,18 @@ int main(){
         <<"14.Alphabet Pyramid\n"
         <<"15.Continuos Alphabet Pyramid\n";
        
+        cout<<"\nEnter Valid Number: ";
+        cin>>type;
+        
+        //error handling
+        error_handling(type);
+        cout<<endl;
+        
+        
+        
+        
+       cout<<"\nDo you want to continue with another pattern (Y/N) :";
+       cin>>choice;
         
     }while(choice == 'Y' || choice == 'y');
         
