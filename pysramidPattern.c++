@@ -1,7 +1,12 @@
 #include <iostream>
 using namespace std;
 
-//functions
+//error handling
+void error_handling(int type){
+    if(type <= 0 || type > 15){
+        cout<<"Invalid input! please enter valid number (1 - 15)";
+    }
+}
 
 
 int main(){
