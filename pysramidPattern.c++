@@ -127,6 +127,12 @@ int main(){
             cin>>n;
             flippedSimplePyramid(n);
             break;
+
+            case 3:
+            cout<<"Enter ROW size: ";
+            cin>>n;
+            triangle(n);
+            break;
             
             
             default:
