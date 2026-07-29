@@ -89,7 +89,13 @@ int main(){
             cout<<"Enter ROW size: ";
             cin>>n;
             simplePyramid(n);
+            break;
             
+            case 2:
+            cout<<"Enter ROW size: ";
+            cin>>n;
+            invertedPyramid(n);
+            break;
             
             
             default:
