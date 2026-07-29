@@ -33,10 +33,23 @@ void simplePyramid(int rows){
      << "}\n";
 }
 
-void invertedPyramid(int size){
+void flippedSimplePyramid(int size){
     for(int i = 0 ; i < size ; i++){
         for(int s = 0 ; s <  size - (i+1) ; s++){
             cout<<"  ";
+        }
+        for(int j = 0 ; j < (i+1) ; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    
+}
+
+void invertedPyramid(int size){
+    for(int i = 0 ; i < size ; i++){
+        for(int s = 0 ; s <  size - (i+1) ; s++){
+            cout<<" ";
         }
         for(int j = 0 ; j < (i+1) ; j++){
             cout<<"* ";
@@ -94,7 +107,7 @@ int main(){
             case 2:
             cout<<"Enter ROW size: ";
             cin>>n;
-            invertedPyramid(n);
+            flippedSimplePyramid(n);
             break;
             
             
