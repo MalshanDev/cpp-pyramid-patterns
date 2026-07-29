@@ -34,6 +34,11 @@ void simplePyramid(int rows){
 }
 
 void flippedSimplePyramid(int size){
+    
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t PATTERN\n"
+        <<"+-------------------------------+\n";
+    
     for(int i = 0 ; i < size ; i++){
         for(int s = 0 ; s <  size - (i+1) ; s++){
             cout<<"  ";
@@ -44,9 +49,22 @@ void flippedSimplePyramid(int size){
         cout<<endl;
     }
     
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t  CODE\n"
+        <<"+-------------------------------+\n";
+    
+    cout << "for(int i = 0 ; i < size ; i++){\n"
+     << "    for(int s = 0 ; s <  size - (i+1) ; s++){\n"
+     << "        cout<<"  ";cout << \"* \";\n"
+     << "    }\n"
+     << "    for(int j = 0 ; j < (i+1) ; j++){\n"
+     << "        cout << \"* \";\n"
+     << "    }\n"
+     << "}\n";
+    
 }
 
-void invertedPyramid(int size){
+void triangle(int size){
     for(int i = 0 ; i < size ; i++){
         for(int s = 0 ; s <  size - (i+1) ; s++){
             cout<<" ";
