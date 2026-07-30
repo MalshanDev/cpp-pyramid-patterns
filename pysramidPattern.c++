@@ -153,7 +153,7 @@ void triangle(int size)
         {
             cout << "* ";
         }
-        cout<< endl;
+        cout << endl;
     }
 
     cout << "for(int i = 0 ; i < size ; i++){\n"
@@ -262,10 +262,22 @@ int main()
             invertedPyramid(n);
             break;
 
+        case 4:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            flippedInvertedPyramid(n);
+            break;
+
         case 5:
             cout << "Enter ROW size: ";
             cin >> n;
             triangle(n);
+            break;
+
+        case 6:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            InvertedTriangle(n);
             break;
 
         default:
