@@ -33,15 +33,15 @@ void simplePyramid(int rows){
      << "}\n";
 }
 
-void flippedSimplePyramid(int size){
+void flippedSimplePyramid(int row){
     
     cout<<"\n+-------------------------------+\n"
         <<"\t\t\t PATTERN\n"
         <<"+-------------------------------+\n";
     
-    for(int i = 0 ; i < size ; i++){
-        for(int s = 0 ; s <  size - (i+1) ; s++){
-            cout<<"  ";
+    for(int i = 0 ; i < row ; i++){
+        for(int s = 0 ; s <  row - (i+1) ; s++){
+            cout<<"  "; //use double space to align the pattern
         }
         for(int j = 0 ; j < (i+1) ; j++){
             cout<<"* ";
@@ -64,6 +64,31 @@ void flippedSimplePyramid(int size){
     
 }
 
+void invertedPyramid(int row){
+
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t PATTERN\n"
+        <<"+-------------------------------+\n";
+
+    for(int i = 0 ; i < row ; i++){
+        for(int j = 0 ; j < (row-i) ; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+    cout<<"\n+-------------------------------+\n"
+        <<"\t\t\t  CODE\n"
+        <<"+-------------------------------+\n";
+
+    cout << "for(int i = 0 ; i < row ; i++){\n"
+     << "    for(int j = 0 ; j < (row - i) ; j++){\n"
+     << "        cout << \"* \";\n"
+     << "    }\n"
+     << "    cout << endl;\n"
+     << "}\n";
+}
+
 void triangle(int size){
     for(int i = 0 ; i < size ; i++){
         for(int s = 0 ; s <  size - (i+1) ; s++){
@@ -74,6 +99,17 @@ void triangle(int size){
         }
         cout<<endl;
     }
+
+
+    cout << "for(int i = 0 ; i < size ; i++){\n"
+     << "    for(int s = 0 ; s < size - (i + 1) ; s++){\n"
+     << "        cout << \" \";\n"
+     << "    }\n"
+     << "    for(int j = 0 ; j < (i + 1) ; j++){\n"
+     << "        cout << \"* \";\n"
+     << "    }\n"
+     << "    cout << endl;\n"
+     << "}\n";
     
 }
 
@@ -129,6 +165,12 @@ int main(){
             break;
 
             case 3:
+            cout<<"Enter ROW size: ";
+            cin>>n;
+            invertedPyramid(n);
+            break;
+
+            case 5:
             cout<<"Enter ROW size: ";
             cin>>n;
             triangle(n);
