@@ -203,6 +203,29 @@ void InvertedTriangle(int row)
          << "}\n";
 }
 
+// pattern 7
+
+void HalfDiomandPattern(int row)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < (row - i); j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int type;
@@ -278,6 +301,12 @@ int main()
             cout << "Enter ROW size: ";
             cin >> n;
             InvertedTriangle(n);
+            break;
+
+        case 7:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            HalfDiomandPattern(n);
             break;
 
         default:
