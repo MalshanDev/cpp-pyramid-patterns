@@ -207,6 +207,11 @@ void InvertedTriangle(int row)
 
 void HalfDiomandPattern(int row)
 {
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < i; j++)
@@ -219,6 +224,60 @@ void HalfDiomandPattern(int row)
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < (row - i); j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "int row = 5;\n"
+         << "for(int i = 0; i < row; i++){\n"
+         << "    for(int j = 0; j < row - (i + 1); j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < i + 1; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n\n"
+         << "for(int i = 1; i < row; i++){\n"
+         << "    for(int j = 0; j < i; j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < row - i; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
+}
+
+// pattern 8
+void FlippedHalfDiamondPattern(int row)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < row - (i + 1); j++)
+        {
+            cout << "  ";
+        }
+        for (int s = 0; s < i + 1; s++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 1; i < row; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "  ";
+        }
+        for (int s = 0; s < row - i; s++)
         {
             cout << "* ";
         }
@@ -307,6 +366,12 @@ int main()
             cout << "Enter ROW size: ";
             cin >> n;
             HalfDiomandPattern(n);
+            break;
+
+        case 8:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            FlippedHalfDiamondPattern(n);
             break;
 
         default:
