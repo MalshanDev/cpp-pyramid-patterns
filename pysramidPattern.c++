@@ -285,6 +285,10 @@ void FlippedHalfDiamondPattern(int row)
     }
 }
 
+//pattern 9
+
+
+
 int main()
 {
     int type;
