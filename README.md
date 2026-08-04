@@ -4,7 +4,7 @@
 
 A menu-driven C++ console application that generates **15 different pattern printing programs** using loops, functions, and switch-case statements.
 
-<img src="images/menu.png" width="700">
+<img src="6" width="700">
 
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=cplusplus)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
@@ -83,7 +83,7 @@ An additional feature of this project is that **the source code of each pattern 
 15. Continuous Alphabet Pyramid
 ```
 
-<img src="5" width="650">
+<img src="6" width="650">
 
 ---
 
