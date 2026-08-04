@@ -317,10 +317,6 @@ void FlippedHalfDiamondPattern(int row)
 void diamondPattern(int row)
 {
 
-    cout << "\n+-------------------------------+\n"
-         << "\t\t\t PATTERN\n"
-         << "+-------------------------------+\n";
-
     // uppper part
     for (int i = 0; i < row; i++)
     {
@@ -338,7 +334,10 @@ void diamondPattern(int row)
     // lower part
     for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < i; j++)
+        for (icout << "\n+-------------------------------+\n"
+                   << "\t\t\t PATTERN\n"
+                   << "+-------------------------------+\n";
+             nt j = 0; j < i; j++)
         {
             cout << " ";
         }
@@ -376,28 +375,63 @@ void diamondPattern(int row)
          << "}\n";
 }
 
-//pattern 10
-void hourglassPattern(int row){
-    for(int i = 0 ; i < row ; i++){
-        for(int j= 0 ; j < i ; j++){
-            cout<<" ";
+// pattern 10
+void hourglassPattern(int row)
+{
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
         }
-        for(int s = 0 ; s < (row-(i)) ; s++){
-            cout<<"* ";
+        for (int s = 0; s < (row - (i)); s++)
+        {
+            cout << "* ";
         }
-        
-        cout<<endl;
+
+        cout << endl;
     }
-    
-    for(int i = 1 ; i < row ; i++){
-        for(int j = 0 ; j < row - (i+1) ; j++){
-            cout<<" ";
+
+    for (int i = 1; i < row; i++)
+    {
+        for (int j = 0; j < row - (i + 1); j++)
+        {
+            cout << " ";
         }
-        for(int s = 0 ; s < i+1 ; s++){
-            cout<<"* ";
+        for (int s = 0; s < i + 1; s++)
+        {
+            cout << "* ";
         }
-        cout<<endl;
+        cout << endl;
     }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "for(int i = 0 ; i < row ; i++){\n"
+         << "    for(int j = 0 ; j < i ; j++){\n"
+         << "        cout << \" \";\n"
+         << "    }\n"
+         << "    for(int s = 0 ; s < (row - i) ; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n\n"
+         << "for(int i = 1 ; i < row ; i++){\n"
+         << "    for(int j = 0 ; j < row - (i + 1) ; j++){\n"
+         << "        cout << \" \";\n"
+         << "    }\n"
+         << "    for(int s = 0 ; s < i + 1 ; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
 }
 
 int main()
