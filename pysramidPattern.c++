@@ -521,6 +521,33 @@ void rotatedNumberPyramid(int row)
          << "}\n";
 }
 
+// pattern 13
+void palindromeTriangle(int row)
+{
+    for (int i = 1; i <= row; i++)
+    {
+        // spaces
+        for (int j = 1; j <= row - i; j++)
+        {
+            cout << "  ";
+        }
+
+        // descending numbers
+        for (int j = i; j >= 1; j--)
+        {
+            cout << j << " ";
+        }
+
+        // ascending numbers
+        for (int j = 2; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+
+        cout << endl;
+    }
+}
+
 int main()
 {
     int type;
