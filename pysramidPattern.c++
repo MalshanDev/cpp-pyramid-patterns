@@ -573,6 +573,42 @@ void palindromeTriangle(int row)
          << "}\n";
 }
 
+// pattern 14
+void alphabetPyramid(int row)
+{
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 1; j <= row - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int k = 0; k < i; k++)
+        {
+            cout << char('A' + k) << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "for(int i = 1; i <= row; i++){\n"
+         << "    for(int j = 1; j <= row - i; j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n"
+         << "    for(int k = 0; k < i; k++){\n"
+         << "        cout << char('A' + k) << \" \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
+}
+
 int main()
 {
     int type;
@@ -684,6 +720,18 @@ int main()
             cout << "Enter ROW size: ";
             cin >> n;
             rotatedNumberPyramid(n);
+            break;
+
+        case 13:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            palindromeTriangle(n);
+            break;
+
+        case 14:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            alphabetPyramid(n);
             break;
 
         default:
