@@ -83,7 +83,7 @@ An additional feature of this project is that **the source code of each pattern 
 15. Continuous Alphabet Pyramid
 ```
 
-<img src="images/menu.png" width="650">
+<img src="5" width="650">
 
 ---
 
@@ -97,19 +97,19 @@ An additional feature of this project is that **the source code of each pattern 
 
 ## 💎 Diamond Pattern
 
-<img src="images/diamond.png" width="500">
+<img src="2.png" width="500">
 
 ---
 
 ## 🔢 Number Pyramid
 
-<img src="images/number-pyramid.png" width="500">
+<img src="3.png" width="500">
 
 ---
 
 ## 🔠 Alphabet Pyramid
 
-<img src="images/alphabet-pyramid.png" width="500">
+<img src="4.png" width="500">
 
 ---
 
