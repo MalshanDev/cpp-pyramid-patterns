@@ -376,6 +376,30 @@ void diamondPattern(int row)
          << "}\n";
 }
 
+//pattern 10
+void hourglassPattern(int row){
+    for(int i = 0 ; i < row ; i++){
+        for(int j= 0 ; j < i ; j++){
+            cout<<" ";
+        }
+        for(int s = 0 ; s < (row-(i)) ; s++){
+            cout<<"* ";
+        }
+        
+        cout<<endl;
+    }
+    
+    for(int i = 1 ; i < row ; i++){
+        for(int j = 0 ; j < row - (i+1) ; j++){
+            cout<<" ";
+        }
+        for(int s = 0 ; s < i+1 ; s++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
 int main()
 {
     int type;
@@ -469,6 +493,12 @@ int main()
             cout << "Enter ROW size: ";
             cin >> n;
             diamondPattern(n);
+            break;
+
+        case 10:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            hourglassPattern(n);
             break;
 
         default:
