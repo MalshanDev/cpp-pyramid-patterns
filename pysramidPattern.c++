@@ -465,19 +465,39 @@ void numberPyramid(int row)
          << "\t\t\t  CODE\n"
          << "+-------------------------------+\n";
 
-         cout << "for(int i = 1; i <= row; i++){\n"
-     << "    for(int j = 0; j < i; j++){\n"
-     << "        cout << i;\n"
-     << "    }\n"
-     << "    cout << endl;\n"
-     << "}\n\n"
-     << "cout << endl;\n\n"
-     << "for(int i = 1; i <= row; i++){\n"
-     << "    for(int j = 1; j <= i; j++){\n"
-     << "        cout << j;\n"
-     << "    }\n"
-     << "    cout << endl;\n"
-     << "}\n";
+    cout << "for(int i = 1; i <= row; i++){\n"
+         << "    for(int j = 0; j < i; j++){\n"
+         << "        cout << i;\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n\n"
+         << "cout << endl;\n\n"
+         << "for(int i = 1; i <= row; i++){\n"
+         << "    for(int j = 1; j <= i; j++){\n"
+         << "        cout << j;\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
+}
+
+// pattern 12
+void rotatedNumberPyramid(int row)
+{
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 0; j < row - i; j++)
+        {
+            cout << "  ";
+        }
+
+        int num = i;
+        for (int k = 0; k < i; k++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
 }
 
 int main()
@@ -585,6 +605,12 @@ int main()
             cout << "Enter ROW size: ";
             cin >> n;
             numberPyramid(n);
+            break;
+
+        case 12:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            rotatedNumberPyramid(n);
             break;
 
         default:
