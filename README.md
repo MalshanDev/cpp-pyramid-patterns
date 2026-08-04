@@ -207,7 +207,7 @@ This project helped me understand
 Computer Science Undergraduate
 
 - 🌐 GitHub: https://github.com/MalshanDev
-- 💼 LinkedIn: *(Add your LinkedIn URL)*
+- 💼 LinkedIn: https://www.linkedin.com/in/%20nadeesha-malshan-1588-nmk
 
 ---
 
