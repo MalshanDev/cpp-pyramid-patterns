@@ -779,6 +779,12 @@ int main()
             alphabetPyramid(n);
             break;
 
+        case 15:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            continuousAlphabetPyramid(n);
+            break;
+
         default:
             cout << "invalid input!";
         }
