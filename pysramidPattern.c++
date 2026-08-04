@@ -524,6 +524,11 @@ void rotatedNumberPyramid(int row)
 // pattern 13
 void palindromeTriangle(int row)
 {
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
     for (int i = 1; i <= row; i++)
     {
         // spaces
@@ -546,6 +551,26 @@ void palindromeTriangle(int row)
 
         cout << endl;
     }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "for(int i = 1; i <= row; i++){\n"
+         << "    // spaces\n"
+         << "    for(int j = 1; j <= row - i; j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n\n"
+         << "    // descending numbers\n"
+         << "    for(int j = i; j >= 1; j--){\n"
+         << "        cout << j << \" \";\n"
+         << "    }\n\n"
+         << "    // ascending numbers\n"
+         << "    for(int j = 2; j <= i; j++){\n"
+         << "        cout << j << \" \";\n"
+         << "    }\n\n"
+         << "    cout << endl;\n"
+         << "}\n";
 }
 
 int main()
