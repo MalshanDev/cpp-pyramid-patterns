@@ -436,6 +436,11 @@ void hourglassPattern(int row)
 // pattern 11
 void numberPyramid(int row)
 {
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
     for (int i = 1; i <= row; i++)
     {
         for (int j = 0; j < i; j++)
@@ -455,6 +460,24 @@ void numberPyramid(int row)
         }
         cout << endl;
     }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+         cout << "for(int i = 1; i <= row; i++){\n"
+     << "    for(int j = 0; j < i; j++){\n"
+     << "        cout << i;\n"
+     << "    }\n"
+     << "    cout << endl;\n"
+     << "}\n\n"
+     << "cout << endl;\n\n"
+     << "for(int i = 1; i <= row; i++){\n"
+     << "    for(int j = 1; j <= i; j++){\n"
+     << "        cout << j;\n"
+     << "    }\n"
+     << "    cout << endl;\n"
+     << "}\n";
 }
 
 int main()
@@ -563,7 +586,7 @@ int main()
             cin >> n;
             numberPyramid(n);
             break;
-            
+
         default:
             cout << "invalid input!";
         }
