@@ -316,7 +316,9 @@ void FlippedHalfDiamondPattern(int row)
 // pattern 9
 void diamondPattern(int row)
 {
-
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
     // uppper part
     for (int i = 0; i < row; i++)
     {
@@ -334,10 +336,7 @@ void diamondPattern(int row)
     // lower part
     for (int i = 0; i < row; i++)
     {
-        for (icout << "\n+-------------------------------+\n"
-                   << "\t\t\t PATTERN\n"
-                   << "+-------------------------------+\n";
-             nt j = 0; j < i; j++)
+        for (int j = 0; j < i; j++)
         {
             cout << " ";
         }
@@ -432,6 +431,30 @@ void hourglassPattern(int row)
          << "    }\n"
          << "    cout << endl;\n"
          << "}\n";
+}
+
+// pattern 11
+void numberPyramid(int row)
+{
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << i;
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+
+    for (int i = 1; i <= row; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j;
+        }
+        cout << endl;
+    }
 }
 
 int main()
@@ -535,6 +558,12 @@ int main()
             hourglassPattern(n);
             break;
 
+        case 11:
+            cout << "Enter ROW size: ";
+            cin >> n;
+            numberPyramid(n);
+            break;
+            
         default:
             cout << "invalid input!";
         }
