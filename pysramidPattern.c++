@@ -258,6 +258,11 @@ void HalfDiomandPattern(int row)
 // pattern 8
 void FlippedHalfDiamondPattern(int row)
 {
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < row - (i + 1); j++)
@@ -283,11 +288,39 @@ void FlippedHalfDiamondPattern(int row)
         }
         cout << endl;
     }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "for(int i = 0; i < row; i++){\n"
+         << "    for(int j = 0; j < row - (i + 1); j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < i + 1; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n\n"
+         << "for(int i = 1; i < row; i++){\n"
+         << "    for(int j = 0; j < i; j++){\n"
+         << "        cout << \"  \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < row - i; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
 }
 
 // pattern 9
 void diamondPattern(int row)
 {
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
     // uppper part
     for (int i = 0; i < row; i++)
     {
@@ -316,6 +349,31 @@ void diamondPattern(int row)
         }
         cout << endl;
     }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "// upper part\n"
+         << "for(int i = 0; i < row; i++){\n"
+         << "    for(int j = 0; j < row - (i + 1); j++){\n"
+         << "        cout << \" \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < i + 1; s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n\n"
+         << "// lower part\n"
+         << "for(int i = 0; i < row; i++){\n"
+         << "    for(int j = 0; j < i; j++){\n"
+         << "        cout << \" \";\n"
+         << "    }\n"
+         << "    for(int s = 0; s < (row - i); s++){\n"
+         << "        cout << \"* \";\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
 }
 
 int main()
