@@ -205,7 +205,7 @@ void InvertedTriangle(int row)
 
 // pattern 7
 
-void HalfDiomandPattern(int row)
+void HalfDiamondPattern(int row)
 {
 
     cout << "\n+-------------------------------+\n"
@@ -609,6 +609,51 @@ void alphabetPyramid(int row)
          << "}\n";
 }
 
+// pattern 15
+void continuousAlphabetPyramid(int row)
+{
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t PATTERN\n"
+         << "+-------------------------------+\n";
+
+    char ch = 'A';
+
+    for (int i = 1; i <= row; i++)
+    {
+        for (int k = 0; k < i; k++)
+        {
+            cout << ch << " ";
+            ch++;
+
+            if (ch > 'Z')
+            {
+                ch = 'A';
+            }
+        }
+
+        cout << endl;
+    }
+
+    cout << "\n+-------------------------------+\n"
+         << "\t\t\t  CODE\n"
+         << "+-------------------------------+\n";
+
+    cout << "char ch = 'A';\n\n"
+         << "for(int i = 1; i <= row; i++){\n"
+         << "    for(int k = 0; k < i; k++){\n"
+         << "        cout << ch << \" \";\n"
+         << "        ch++;\n"
+         << "\n"
+         << "        if (ch > 'Z')\n"
+         << "        {\n"
+         << "            ch = 'A';\n"
+         << "        }\n"
+         << "    }\n"
+         << "    cout << endl;\n"
+         << "}\n";
+}
+
 int main()
 {
     int type;
@@ -637,7 +682,7 @@ int main()
              << "12.Rotated Number Pyramid\n"
              << "13.Palindrome Triangle\n"
              << "14.Alphabet Pyramid\n"
-             << "15.Continuos Alphabet Pyramid\n";
+             << "15.Continuous Alphabet Pyramid\n";
 
         cout << "\nEnter Valid Number: ";
         cin >> type;
@@ -689,7 +734,7 @@ int main()
         case 7:
             cout << "Enter ROW size: ";
             cin >> n;
-            HalfDiomandPattern(n);
+            HalfDiamondPattern(n);
             break;
 
         case 8:
